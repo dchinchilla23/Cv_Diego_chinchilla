@@ -23,15 +23,10 @@ FontAwesome: Iconos personalizados para mejorar la experiencia visual.
 ✅ Código limpio, modular y estructurado para facilitar escalabilidad.
 
 📂 Repositorio
-
 🔗 GitHub - CV Web
 
 📢 Próximos Mejoras
-
 Integración con una API para mostrar proyectos dinámicamente.
-
-Agregar un formulario de contacto funcional con JavaScript y PHP.
-
 Implementación de modo oscuro para mejorar la experiencia del usuario.
 
 Si tienes sugerencias o quieres colaborar, ¡contáctame! 🚀
