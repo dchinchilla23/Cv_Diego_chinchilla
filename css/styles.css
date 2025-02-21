@@ -1,0 +1,325 @@
+/* General */
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0073b1, #004d73);
+    color: #fff;
+    padding: 40px 0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column; /* Para alinear en columna */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Asegura que el texto también esté centrado */
+    gap: 10px; /* Espaciado entre la imagen y el texto */
+}
+.justified-text {
+    text-align: justify;
+    line-height: 1.6; /* Mejora la legibilidad */
+    margin: 20px 0; /* Añade espacio alrededor del párrafo */
+    font-size: 1.1em; /* Ajusta el tamaño del texto */
+}
+
+.profile-pic {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Evita distorsión de la imagen */
+    border: 3px solid white; /* Un borde para destacar */
+}
+
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.profile-info .subtitle {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #e2e2e2;
+    
+}
+.profile-info {
+    text-align: center; /* Centra el texto */
+    display: flex;
+    flex-direction: column; /* Organiza en columna */
+    align-items: center; /* Centra horizontalmente */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+.profile-info .location {
+    margin: 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Evita que se desborden en pantallas pequeñas */
+    width: 100%; /* Ocupar todo el ancho */
+    text-align: center; /* Asegura que los elementos internos estén alineados */
+}
+
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0073b1;
+    border-bottom: 2px solid #0073b1;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.job, .education-item, .project {
+    margin-bottom: 20px;
+}
+
+.job h3, .education-item h3, .project h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.company, .institution, .description {
+    font-style: italic;
+    color: #777;
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Skills */
+.skills-grid {
+    display:grid; /* Usamos grid en lugar de flex */
+    grid-template-columns: repeat(auto-fit, minmax(168px,5fr));
+    gap: 15px; /* Espacio mejorado entre elementos */
+    justify-content: center; /* Centra las habilidades */
+    align-items: center; /* Asegura alineación vertical */
+    padding: 10px; /* Espaciado alrededor */
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd; /* Color de fondo */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Se animará con JS */
+    background-color: #4CAF50; /* Verde llamativo */
+    transition: width 1s ease-in-out;
+}
+
+
+.skill {
+    background: #0073b1;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.skill:hover {
+    background: #004d73;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: #2b2b2b; /* Color de fondo oscuro */
+    color: #ffffff; /* Texto en blanco */
+    padding: 20px;
+    text-align: center;
+}
+footer .container {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 20px;
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Espaciado entre las animaciones */
+    flex-wrap: wrap; /* Permite que se acomode en móviles */
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #004d73, #002b40);
+}
+
+body.dark-mode h2 {
+    color: #ffdd57;
+    border-bottom-color: #ffdd57;
+}
+
+body.dark-mode .skill {
+    background: #004d73;
+}
+
+body.dark-mode .skill:hover {
+    background: #002b40;
+}
+
+body.dark-mode footer {
+    background: #000;
+}
+
+/* Botón de Tema */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #0073b1;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #004d73;
+}
+
+/* Botón para subir al inicio */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0073b1;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+.scroll-to-top:hover {
+    background: #004d73;
+}
+
+/* Animaciones al hacer scroll */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+details {
+    list-style: none;
+}
+
+h3 {
+    color: #333; /* Color del texto en modo claro */
+    background-color: #fff; /* Fondo en modo claro */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* barra de desplzamiento al proyecto 
+/* Aplica el scroll a toda la página */
+html {
+    overflow: auto; /* Activa el desplazamiento si el contenido excede el tamaño */
+    height: 100%;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff; /* Color del scroll */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+
+
+/* ////////// */
+
